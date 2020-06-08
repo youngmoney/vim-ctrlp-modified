@@ -21,7 +21,7 @@ else
 endif
 
 function! ctrlp#modified#init()
-  return split(system(get(g:, 'ctrlp_modified_command', 'echo no command specified')), "\n")
+  return split(system(get(g:, 'ctrlp_modified_command', 'echo "no command specified in g:ctrlp_modified_command"')), "\n")
 endfunc
 
 let s:id = g:ctrlp_builtins + len(g:ctrlp_ext_vars)
